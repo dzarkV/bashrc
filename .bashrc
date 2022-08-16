@@ -117,6 +117,6 @@ GIT_PS1_SHOWUPSTREAM="true"
 GIT_PS1_SHOWCOLORHINTS="true"
 source ~/.git-prompt.sh
 
-PS1='[\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\W$(__git_ps1 " (%s)")\[\033[00m\]]\$ '
-# Uncomented
+PS1='\[\033[0m\][\[\033[01;32m\]\u@\h\[\033[0m\]: \[\033[01;34m\]\W$(__git_ps1 " (%s)")\[\033[0m\]]\n\[\033[32m\]> \[$(tput sgr0)\]'
+# Color delimitation \[ and \], Esc \033 and color definition [01;34m . So, \[\033[32m\] is green for the rest of the line until tput sgr0 call, which reset to default color
 
