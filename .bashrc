@@ -119,7 +119,8 @@ source ~/.git-prompt.sh
 
 PS1='\[\033[0m\][\[\033[01;32m\]\u@\h\[\033[0m\]: \[\033[01;34m\]\W$(__git_ps1 " (%s)")\[\033[0m\]]\n\[\033[92m\]> \[$(tput sgr0)\]'
 # Color delimitation \[ and \], Esc \033 and color definition [01;34m . So, \[\033[32m\] is green for the rest of the line until tput sgr0 call, which reset to default color
-
+# LocOs alternative 
+# export PS1='\[$(tput bold)\]\[\033[38;5;75m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;9m\]\h\[$(tput sgr0)\]:\[$(tput sgr0)\]\[\033[38;5;76m\]\w\[$(tput sgr0)\]\[\033[01;34m\]$(__git_ps1 " (%s)")\[\033[92m\]\n\$ \[$(tput sgr0)\]'
 
 export PATH="/home/dzark/.deta/bin:$PATH"
 export PATH="/opt/idea-IU-222.4345.14/bin:$PATH"
